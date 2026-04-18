@@ -9,3 +9,4 @@ Features:
 - Serving 30+ Tampa Bay communities
 - Service areas hub page with city links
 - SEO optimized with sitemap and robots.txt
+- Google Search Console verification file added
