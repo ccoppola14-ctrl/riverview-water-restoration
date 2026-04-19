@@ -139,5 +139,35 @@
             <p>© 2026 Riverview Water Restoration | Licensed & Insured | (813) 492-4650</p>
         </div>
     </footer>
+    <section style="background: #c53030; color: white; padding: 50px 20px; text-align: center;">
+        <h2 style="font-size: 1.8rem; margin-bottom: 10px;">Need Help? Get a Free Estimate</h2>
+        <p style="font-size: 1.1rem; opacity: 0.95; margin-bottom: 25px;">Fill out this quick form and we'll call you within 15 minutes</p>
+        <div style="max-width: 500px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; color: #333;">
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <div style="margin-bottom: 15px; text-align: left;">
+                    <label style="display: block; font-weight: 600; margin-bottom: 5px;">Your Name *</label>
+                    <input type="text" name="name" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;">
+                </div>
+                <div style="margin-bottom: 15px; text-align: left;">
+                    <label style="display: block; font-weight: 600; margin-bottom: 5px;">Phone Number *</label>
+                    <input type="tel" name="phone" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;">
+                </div>
+                <div style="margin-bottom: 15px; text-align: left;">
+                    <label style="display: block; font-weight: 600; margin-bottom: 5px;">ZIP Code *</label>
+                    <input type="text" name="zip" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;">
+                </div>
+                <div style="margin-bottom: 15px; text-align: left;">
+                    <label style="display: block; font-weight: 600; margin-bottom: 5px;">How Urgent? *</label>
+                    <select name="urgency" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;">
+                        <option value="">Select...</option>
+                        <option value="emergency">Emergency — Water flooding now</option>
+                        <option value="same-day">Same day — Need help today</option>
+                        <option value="this-week">This week — Not urgent</option>
+                    </select>
+                </div>
+                <button type="submit" style="width: 100%; background: #48bb78; color: white; padding: 15px; border: none; border-radius: 6px; font-size: 1.1rem; font-weight: 600; cursor: pointer;">📞 Get Free Estimate — We'll Call You</button>
+            </form>
+        </div>
+    </section>
 </body>
 </html>
