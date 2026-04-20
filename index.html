@@ -38,19 +38,106 @@
         .footer-nav { margin: 20px 0; }
         .footer-nav a { color: #a0aec0; text-decoration: none; margin: 0 15px; }
         @media (max-width: 768px) { .header h1 { font-size: 1.8rem; } }
+        
+        /* Sticky Call Button for Mobile */
+        @media (max-width: 768px) {
+            .sticky-call-btn {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+                color: white;
+                padding: 18px;
+                text-align: center;
+                font-size: 1.3rem;
+                font-weight: 700;
+                text-decoration: none;
+                z-index: 9999;
+                box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+            }
+            .sticky-call-btn:active {
+                background: #2f855a;
+            }
+            body {
+                padding-bottom: 70px;
+            }
+        }
+        @media (min-width: 769px) {
+            .sticky-call-btn {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="emergency-bar">
         <a href="tel:8134924650">🚨 24/7 Emergency Hotline: (813) 492-4650</a>
     </div>
-    <header class="header">
-        <div class="container">
-            <h1>Water Damage Restoration in Riverview, FL</h1>
-            <p>24/7 emergency flood cleanup, water extraction & structural drying. Licensed, insured & IICRC certified. Serving Tampa Bay.</p>
-            <a href="tel:8134924650" class="cta-button">📞 Call Now — Free Estimate</a>
+    <header style="background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%); color: white; padding: 60px 20px 40px; text-align: center; position: relative; overflow: hidden;">
+        <!-- Trust Badges Bar -->
+    <div style="background: rgba(255,255,255,0.1); padding: 12px; margin: -60px -20px 30px; font-size: 0.9rem; display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap;">
+        <span>⭐⭐⭐⭐⭐ 9 Reviews</span>
+        <span>|</span>
+        <span>🎓 IICRC Certified</span>
+        <span>|</span>
+        <span>✅ Licensed & Insured</span>
+        <span>|</span>
+        <span>⚡ Under 60 Min Response</span>
+    </div>
+    
+    <h1 style="font-size: 2.4rem; font-weight: 800; margin-bottom: 15px; line-height: 1.2; text-transform: uppercase; letter-spacing: -0.5px;">Water Damage Emergency?<br>We Arrive in Under 60 Minutes</h1>
+    
+    <p style="font-size: 1.3rem; opacity: 0.95; margin-bottom: 15px; max-width: 700px; margin-left: auto; margin-right: auto;">24/7 emergency water damage restoration in Tampa Bay. <span style="color: #fc8181; font-weight: 700;">Mold starts growing in 24 hours</span> — don't wait.</p>
+    
+    <!-- Phone CTA -->
+    <a href="tel:8134924650" style="display: inline-block; background: linear-gradient(135deg, #48bb78 0%, #38a169 100%); color: white; padding: 20px 50px; border-radius: 8px; text-decoration: none; font-size: 1.5rem; font-weight: 800; margin: 10px; box-shadow: 0 4px 15px rgba(72,187,120,0.4); border: 3px solid rgba(255,255,255,0.3);">
+        📞 Call (813) 492-4650
+    </a>
+    
+    <p style="margin-top: 15px; font-size: 1rem; opacity: 0.9;">🚨 24/7 Live Answer — No Voicemail — Calls Answered in Seconds</p>
+    
+    <!-- Secondary CTA -->
+    <p style="margin-top: 20px; font-size: 1.1rem;">Or <a href="#lead-form" style="color: #90ee90; text-decoration: underline; font-weight: 700;">fill out the form below</a> — we'll call you in 15 minutes</p>
+</header>
+
+    <!-- Trust Badges Section -->
+    <section style="background: #f7fafc; padding: 40px 20px; border-bottom: 3px solid #e2e8f0;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center;">
+                <div style="padding: 20px;">
+                    <div style="font-size: 2.5rem; margin-bottom: 10px;">⭐⭐⭐⭐⭐</div>
+                    <h3 style="color: #1a365d; font-size: 1.2rem; margin-bottom: 5px;">9 Five-Star Reviews</h3>
+                    <p style="color: #718096; font-size: 0.9rem;">Real customers. Real results.</p>
+                </div>
+                <div style="padding: 20px;">
+                    <div style="font-size: 2.5rem; margin-bottom: 10px;">⚡</div>
+                    <h3 style="color: #1a365d; font-size: 1.2rem; margin-bottom: 5px;">Under 60 Min Response</h3>
+                    <p style="color: #718096; font-size: 0.9rem;">We're local. We arrive fast.</p>
+                </div>
+                <div style="padding: 20px;">
+                    <div style="font-size: 2.5rem; margin-bottom: 10px;">🎓</div>
+                    <h3 style="color: #1a365d; font-size: 1.2rem; margin-bottom: 5px;">IICRC Certified</h3>
+                    <p style="color: #718096; font-size: 0.9rem;">Industry-standard certified techs</p>
+                </div>
+                <div style="padding: 20px;">
+                    <div style="font-size: 2.5rem; margin-bottom: 10px;">🛡️</div>
+                    <h3 style="color: #1a365d; font-size: 1.2rem; margin-bottom: 5px;">Licensed & Insured</h3>
+                    <p style="color: #718096; font-size: 0.9rem;">Full coverage. You're protected.</p>
+                </div>
+                <div style="padding: 20px;">
+                    <div style="font-size: 2.5rem; margin-bottom: 10px;">💰</div>
+                    <h3 style="color: #1a365d; font-size: 1.2rem; margin-bottom: 5px;">Insurance Welcome</h3>
+                    <p style="color: #718096; font-size: 0.9rem;">We bill insurance direct</p>
+                </div>
+            </div>
         </div>
-    </header>
+    </section>
+
     <section class="features">
         <div class="container">
             <div class="features-grid">
@@ -139,35 +226,49 @@
             <p>© 2026 Riverview Water Restoration | Licensed & Insured | (813) 492-4650</p>
         </div>
     </footer>
-    <section style="background: #c53030; color: white; padding: 50px 20px; text-align: center;">
-        <h2 style="font-size: 1.8rem; margin-bottom: 10px;">Need Help? Get a Free Estimate</h2>
-        <p style="font-size: 1.1rem; opacity: 0.95; margin-bottom: 25px;">Fill out this quick form and we'll call you within 15 minutes</p>
-        <div style="max-width: 500px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; color: #333;">
+    <section id="lead-form" style="background: linear-gradient(135deg, #c53030 0%, #9b2c2c 100%); color: white; padding: 50px 20px; text-align: center;">
+        <h2 style="font-size: 2rem; margin-bottom: 10px; font-weight: 700;">Get Your Free Estimate in 15 Minutes</h2>
+        <p style="font-size: 1.2rem; opacity: 0.95; margin-bottom: 25px;">Fill out this quick form. We'll call you within 15 minutes — or call <a href="tel:8134924650" style="color: #90ee90; font-weight: 700;">(813) 492-4650</a> now</p>
+        <div style="max-width: 500px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; color: #333; box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
             <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <input type="hidden" name="_subject" value="URGENT: New Water Damage Lead">
+                <input type="hidden" name="_next" value="https://riverviewwaterrestoration.com/thank-you.html">
+                
                 <div style="margin-bottom: 15px; text-align: left;">
-                    <label style="display: block; font-weight: 600; margin-bottom: 5px;">Your Name *</label>
-                    <input type="text" name="name" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;">
+                    <label style="display: block; font-weight: 700; margin-bottom: 5px; color: #1a365d;">Your Name *</label>
+                    <input type="text" name="name" required style="width: 100%; padding: 14px; border: 2px solid #e2e8f0; border-radius: 6px; font-size: 1rem;" placeholder="John Smith">
                 </div>
+                
                 <div style="margin-bottom: 15px; text-align: left;">
-                    <label style="display: block; font-weight: 600; margin-bottom: 5px;">Phone Number *</label>
-                    <input type="tel" name="phone" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;">
+                    <label style="display: block; font-weight: 700; margin-bottom: 5px; color: #1a365d;">Phone Number *</label>
+                    <input type="tel" name="phone" required style="width: 100%; padding: 14px; border: 2px solid #e2e8f0; border-radius: 6px; font-size: 1rem;" placeholder="(813) 555-1234">
                 </div>
+                
                 <div style="margin-bottom: 15px; text-align: left;">
-                    <label style="display: block; font-weight: 600; margin-bottom: 5px;">ZIP Code *</label>
-                    <input type="text" name="zip" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;">
+                    <label style="display: block; font-weight: 700; margin-bottom: 5px; color: #1a365d;">ZIP Code *</label>
+                    <input type="text" name="zip" required style="width: 100%; padding: 14px; border: 2px solid #e2e8f0; border-radius: 6px; font-size: 1rem;" placeholder="33578">
                 </div>
-                <div style="margin-bottom: 15px; text-align: left;">
-                    <label style="display: block; font-weight: 600; margin-bottom: 5px;">How Urgent? *</label>
-                    <select name="urgency" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;">
-                        <option value="">Select...</option>
-                        <option value="emergency">Emergency — Water flooding now</option>
-                        <option value="same-day">Same day — Need help today</option>
-                        <option value="this-week">This week — Not urgent</option>
+                
+                <div style="margin-bottom: 20px; text-align: left;">
+                    <label style="display: block; font-weight: 700; margin-bottom: 5px; color: #1a365d;">How Urgent Is This? *</label>
+                    <select name="urgency" required style="width: 100%; padding: 14px; border: 2px solid #e2e8f0; border-radius: 6px; font-size: 1rem; background: white;">
+                        <option value="">Select urgency...</option>
+                        <option value="emergency">🚨 Emergency — Water flooding NOW</option>
+                        <option value="same-day">⚡ Same day — Need help today</option>
+                        <option value="this-week">📅 This week — Planning ahead</option>
                     </select>
                 </div>
-                <button type="submit" style="width: 100%; background: #48bb78; color: white; padding: 15px; border: none; border-radius: 6px; font-size: 1.1rem; font-weight: 600; cursor: pointer;">📞 Get Free Estimate — We'll Call You</button>
+                
+                <button type="submit" style="width: 100%; background: linear-gradient(135deg, #48bb78 0%, #38a169 100%); color: white; padding: 16px; border: none; border-radius: 6px; font-size: 1.2rem; font-weight: 700; cursor: pointer; text-transform: uppercase; letter-spacing: 0.5px;">📞 Get Free Estimate — We'll Call You</button>
+                
+                <p style="margin-top: 15px; font-size: 0.9rem; color: #666;">⏱️ Takes 30 seconds. We respond in 15 minutes or less.</p>
             </form>
         </div>
     </section>
+
+    <!-- Sticky Mobile Call Button -->
+    <a href="tel:8134924650" class="sticky-call-btn">
+        📞 Call Now (813) 492-4650
+    </a>
 </body>
 </html>
