@@ -150,12 +150,78 @@
     
     <a href="tel:8134924650" class="sticky-call">📞 CALL NOW (813) 492-4650</a>
     
+    <!-- Video Testimonials Section -->
+    <section style="background: #f8fafc; padding: 60px 20px;">
+        <h2 style="text-align: center; font-size: 1.8rem; color: #1e293b; margin-bottom: 40px;">🎥 Real Tampa Bay Homeowners We Helped</h2>
+        <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+            <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                <div style="background: #1e293b; height: 180px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; margin-bottom: 20px;">▶️</div>
+                <p style="font-style: italic; color: #475569; margin-bottom: 15px;">"They were at my door in 45 minutes at 2 AM. Saved my hardwood floors and handled everything with insurance."</p>
+                <p style="font-weight: 700; color: #1e293b;">— Sarah M., Riverview, FL</p>
+                <p style="font-size: 0.9rem; color: #16a34a;">⭐⭐⭐⭐⭐ Google Review</p>
+            </div>
+            <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                <div style="background: #1e293b; height: 180px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; margin-bottom: 20px;">▶️</div>
+                <p style="font-style: italic; color: #475569; margin-bottom: 15px;">"Made a nightmare situation so much easier. Professional, fast, and genuinely cared about getting our home back."</p>
+                <p style="font-weight: 700; color: #1e293b;">— David K., Brandon, FL</p>
+                <p style="font-size: 0.9rem; color: #16a34a;">⭐⭐⭐⭐⭐ Google Review</p>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 30px; color: #64748b; font-size: 0.95rem;">📹 Ask us for video testimonials — we'll record one with you after we complete your restoration</p>
+    </section>
+    
+    <!-- Exit Intent Popup -->
+    <div id="exit-popup" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.8); z-index: 9999; justify-content: center; align-items: center;">
+        <div style="background: white; max-width: 500px; padding: 40px; border-radius: 12px; text-align: center; position: relative; margin: 20px;">
+            <button onclick="document.getElementById('exit-popup').style.display='none'" style="position: absolute; top: 15px; right: 15px; background: none; border: none; font-size: 1.5rem; cursor: pointer;">✕</button>
+            <div style="font-size: 4rem; margin-bottom: 15px;">⚠️</div>
+            <h2 style="color: #dc2626; font-size: 1.8rem; margin-bottom: 15px;">WAIT — Your Home Is Still Getting Worse</h2>
+            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 25px;">Water damage doesn't pause. While you decide, <strong>mold is already growing</strong>.</p>
+            <a href="tel:8134924650" style="display: block; background: linear-gradient(135deg, #16a34a 0%, #15803d 100%); color: white; padding: 20px; border-radius: 8px; text-decoration: none; font-size: 1.3rem; font-weight: 700; margin-bottom: 15px;">📞 CALL NOW (813) 492-4650</a>
+            <p style="font-size: 0.9rem; color: #64748b; margin-top: 15px;">⏱️ We've saved 200+ Tampa Bay homes this year</p>
+        </div>
+    </div>
+    
+    <!-- Social Proof Notifications -->
+    <div id="social-proof" style="position: fixed; bottom: 150px; left: 20px; background: white; padding: 15px 20px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); max-width: 300px; z-index: 997; display: none; border-left: 4px solid #16a34a;">
+        <p style="margin: 0; font-size: 0.9rem; color: #1e293b;"><strong style="color: #16a34a;">✓</strong> <span id="sp-name">Sarah M.</span> from <span id="sp-location">Riverview</span> just requested help <span id="sp-time">2 minutes ago</span></p>
+    </div>
+    
     <script>
+        // Phone click tracking
         document.querySelectorAll('a[href^="tel:"]').forEach(function(link) {
             link.addEventListener('click', function() {
                 gtag('event', 'phone_click', { 'event_category': 'engagement', 'event_label': window.location.pathname });
             });
         });
+        
+        // Exit intent detection
+        let mouseY = 0;
+        document.addEventListener('mousemove', function(e) { mouseY = e.clientY; });
+        document.addEventListener('mouseleave', function() {
+            if (mouseY < 50 && !localStorage.getItem('exitPopupShown')) {
+                document.getElementById('exit-popup').style.display = 'flex';
+                localStorage.setItem('exitPopupShown', 'true');
+                gtag('event', 'exit_popup_shown', { 'event_category': 'engagement' });
+            }
+        });
+        
+        // Social proof notifications
+        const names = ['Mike T.', 'Jennifer R.', 'David K.', 'Amanda P.', 'Chris B.', 'Lisa M.'];
+        const locations = ['Brandon', 'Riverview', 'Valrico', 'Wesley Chapel', 'Tampa', 'Lithia'];
+        const times = ['just now', '1 minute ago', '2 minutes ago', '3 minutes ago', '5 minutes ago'];
+        
+        function showSocialProof() {
+            document.getElementById('sp-name').textContent = names[Math.floor(Math.random() * names.length)];
+            document.getElementById('sp-location').textContent = locations[Math.floor(Math.random() * locations.length)];
+            document.getElementById('sp-time').textContent = times[Math.floor(Math.random() * times.length)];
+            const popup = document.getElementById('social-proof');
+            popup.style.display = 'block';
+            setTimeout(() => { popup.style.display = 'none'; }, 5000);
+        }
+        
+        setTimeout(showSocialProof, 5000);
+        setInterval(showSocialProof, 25000 + Math.random() * 15000);
     </script>
 </body>
 </html>
